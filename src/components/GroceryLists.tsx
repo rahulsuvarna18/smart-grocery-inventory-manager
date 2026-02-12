@@ -5,6 +5,8 @@ import Error from "../ui/Error";
 import styled from "styled-components";
 import GroceryListCard from "../ui/GroceryListCards";
 import CreateGroceryList from "./CreateGroceryList";
+// import EmptyState from "./EmptyState/EmptyState";
+import "../lit/EmptyState";
 import EmptyState from "./EmptyState/EmptyState";
 
 export const GroceryLists = () => {
@@ -25,7 +27,8 @@ export const GroceryLists = () => {
       <ButtonContainer>
         <CreateGroceryList />
       </ButtonContainer>
-      {groceryLists && groceryLists.length > 0 ? <GroceryListCard groceryLists={groceryLists} /> : <EmptyState title="No Grocery Lists Yet" text="Create your first grocery list above to get started with organizing your groceries." />}
+      {/* {groceryLists && groceryLists.length > 0 ? <GroceryListCard groceryLists={groceryLists} /> : <EmptyState title="No Grocery Lists Yet" text="Create your first grocery list above to get started with organizing your groceries." />} */}
+      {groceryLists && groceryLists.length > 0 ? <GroceryListCard groceryLists={groceryLists} /> : <EmptyState title="No Grocery Lists Yet" text="Create your first grocery list above to get started with organizing your groceries."></EmptyState>}
     </>
   );
 };
