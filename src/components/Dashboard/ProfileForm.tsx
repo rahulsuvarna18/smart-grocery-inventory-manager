@@ -9,7 +9,7 @@ interface ProfileFormProps {
   isUpdating: boolean;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent) => Promise<void>;
-  user: any; // Adjust the type according to your user object structure
+  user: any;
 }
 
 const ProfileForm: React.FC<ProfileFormProps> = ({ formData, isUpdating, handleChange, handleSubmit, user }) => {
